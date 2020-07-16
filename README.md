@@ -2,7 +2,7 @@
 
 # React Calculator
 
-![screenshot](public/screenshot.png)
+![screenshot](src/assets/images/screenshot.png)
 
 In this project I:
 
