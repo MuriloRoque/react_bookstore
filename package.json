@@ -1,5 +1,5 @@
 {
-  "name": "react_calculator",
+  "name": "react_bookstore",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "react-redux": "^7.2.0",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-csstree-validator": "^1.8.0",
