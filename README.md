@@ -23,7 +23,7 @@ In this project I:
 
 ## Live Demo
 
-[Click here](https://murilo-react-calculator.herokuapp.com/)
+[Click here](https://murilo-react-bookstore.herokuapp.com/)
 
 ## Getting Started
 
