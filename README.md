@@ -30,7 +30,8 @@ In this project I:
 - Clone the project to your local machine;
 - `cd` into the project directory;
 - Run `npm install` to install the necessary modules;
-- Run `npm start`, the page will automatically load on [localhost:3000](localhost:3000).
+- Run `npm start`, the page will automatically load on [localhost:3000](localhost:3000);
+- Run `npm test` to run the tests.
 
 ## Author
 
