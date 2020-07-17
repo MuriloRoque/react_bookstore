@@ -1,8 +1,10 @@
 import React from 'react';
 import '../styles/BooksList.scss';
 import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+import Book from "../components/Book";
 
-function BooksList() {
+function BooksList(props) {
   return (
     <table>
       <tr>
