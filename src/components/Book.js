@@ -3,12 +3,13 @@ import '../styles/Book.scss';
 import PropTypes from 'prop-types';
 
 function Book(props) {
+  const { id, title, category } = props.book;
   return (
       <tr>
         <tr>
-          <td>{props.book.id}</td>
-          <td>{props.book.title}</td>
-          <td>{props.book.category}</td>
+          <td>{id}</td>
+          <td>{title}</td>
+          <td>{category}</td>
         </tr>
       </tr>
   );
