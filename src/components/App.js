@@ -1,10 +1,13 @@
 import React from 'react';
 import '../styles/App.scss';
+import BooksList from './BooksList';
+import BooksForm from './BooksForm';
 
 function App() {
   return (
     <div>
-      <h1 className="title">Welcome to the Bookstore!</h1>
+      <BooksList />
+      <BooksForm />
     </div>
   );
 }
