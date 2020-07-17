@@ -5,13 +5,11 @@ import PropTypes from 'prop-types';
 function Book(props) {
   const { id, title, category } = props.book;
   return (
-      <tr>
-        <tr>
-          <td>{id}</td>
-          <td>{title}</td>
-          <td>{category}</td>
-        </tr>
-      </tr>
+    <tr>
+      <td>{id}</td>
+      <td>{title}</td>
+      <td>{category}</td>
+    </tr>
   );
 }
 
