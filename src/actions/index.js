@@ -1,11 +1,11 @@
-import ACTIONTYPES from '../constants/ActionTypes';
+import {REMOVE_BOOK, CREATE_BOOK} from '../constants/ActionTypes';
 
 export const createBook = book => ({
-  type: ACTIONTYPES.CREATE_BOOK,
+  type: CREATE_BOOK,
   book,
 });
 
 export const removeBook = book => ({
-  type: ACTIONTYPES.REMOVE_BOOK,
+  type: REMOVE_BOOK,
   book: book.id,
 });
