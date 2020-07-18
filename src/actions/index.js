@@ -7,5 +7,5 @@ export const createBook = book => ({
 
 export const removeBook = book => ({
   type: ACTIONTYPES.REMOVE_BOOK,
-  book,
+  book: book.id,
 });
