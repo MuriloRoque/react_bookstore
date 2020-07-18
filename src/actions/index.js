@@ -1,4 +1,4 @@
-import {REMOVE_BOOK, CREATE_BOOK} from '../constants/ActionTypes';
+import { REMOVE_BOOK, CREATE_BOOK } from '../constants/ActionTypes';
 
 export const createBook = book => ({
   type: CREATE_BOOK,

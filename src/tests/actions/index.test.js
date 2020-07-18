@@ -1,5 +1,5 @@
 import { createBook, removeBook } from '../../actions/index';
-import {CREATE_BOOK, REMOVE_BOOK} from '../../constants/ActionTypes';
+import { CREATE_BOOK, REMOVE_BOOK } from '../../constants/ActionTypes';
 
 describe('actions', () => {
   test('should create an action to create a book', () => {
