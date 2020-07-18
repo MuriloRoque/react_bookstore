@@ -8,7 +8,9 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
 import INITIAL_STATE from './constants/InitialState';
 
-const store = createStore(rootReducer, INITIAL_STATE);
+const STATE = { books: INITIAL_STATE };
+
+const store = createStore(rootReducer, STATE);
 
 ReactDOM.render(
   <Provider store={store}>
