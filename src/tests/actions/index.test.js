@@ -1,9 +1,11 @@
 import { createBook, removeBook } from '../../actions/index';
+import { v1 as uuidv1 } from 'uuid';
 import { CREATE_BOOK, REMOVE_BOOK } from '../../constants/ActionTypes';
 
 describe('actions', () => {
+  let id = uuidv1();
   test('should create an action to create a book', () => {
-    const book = 'Harry Potter';
+    const book = { title: 'Harry Potter', id, category: 'Action' };
     const expectedAction = {
       type: CREATE_BOOK,
       book,
@@ -12,11 +14,10 @@ describe('actions', () => {
   });
 
   test('should create an action to remove a book', () => {
-    const book = 'Harry Potter';
     const expectedAction = {
       type: REMOVE_BOOK,
-      book: book.id,
+      id,
     };
-    expect(removeBook(book)).toEqual(expectedAction);
+    expect(removeBook(id)).toEqual(expectedAction);
   });
 });
