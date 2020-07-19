@@ -1,9 +1,9 @@
-import { createBook, removeBook } from '../../actions/index';
 import { v1 as uuidv1 } from 'uuid';
+import { createBook, removeBook } from '../../actions/index';
 import { CREATE_BOOK, REMOVE_BOOK } from '../../constants/ActionTypes';
 
 describe('actions', () => {
-  let id = uuidv1();
+  const id = uuidv1();
   test('should create an action to create a book', () => {
     const book = { title: 'Harry Potter', id, category: 'Action' };
     const expectedAction = {
