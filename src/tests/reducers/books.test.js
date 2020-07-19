@@ -36,7 +36,7 @@ describe('books reducer', () => {
     expect(
       books([{ id, title: 'Test book', category: 'Action' }], {
         type: REMOVE_BOOK,
-        book: id,
+        id,
       }),
     ).toEqual([]);
 
@@ -45,7 +45,7 @@ describe('books reducer', () => {
         ...INITIAL_STATE, { id, title: 'Test book', category: 'Action' }],
       {
         type: REMOVE_BOOK,
-        book: id,
+        id,
       }),
     ).toEqual([
       ...INITIAL_STATE,
