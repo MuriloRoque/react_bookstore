@@ -1,6 +1,6 @@
 import { v1 as uuidv1 } from 'uuid';
 
-const INITIAL_STATE = [
+export const INITIAL_STATE = [
   { id: uuidv1(), title: 'Life of Action', category: 'Action' },
   { id: uuidv1(), title: 'Becoming', category: 'Biography' },
   { id: uuidv1(), title: 'Sapiens: A Brief History of Humankind', category: 'History' },
@@ -10,4 +10,4 @@ const INITIAL_STATE = [
   { id: uuidv1(), title: 'Dune', category: 'Sci-Fi' },
 ];
 
-export default INITIAL_STATE;
+export const FILTER_STATE = 'All';
