@@ -7,6 +7,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
 import INITIAL_STATE from './constants/InitialState';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const STATE = { books: INITIAL_STATE };
 
