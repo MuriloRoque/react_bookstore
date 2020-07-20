@@ -1,9 +1,10 @@
 import { v1 as uuidv1 } from 'uuid';
-import { createBook, removeBook } from '../../actions/index';
-import { CREATE_BOOK, REMOVE_BOOK } from '../../constants/ActionTypes';
+import { createBook, removeBook, filterBook } from '../../actions/index';
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from '../../constants/ActionTypes';
 
 describe('actions', () => {
   const id = uuidv1();
+  const category = 'Action'
   test('should create an action to create a book', () => {
     const book = { title: 'Harry Potter', id, category: 'Action' };
     const expectedAction = {
@@ -19,5 +20,13 @@ describe('actions', () => {
       id,
     };
     expect(removeBook(id)).toEqual(expectedAction);
+  });
+
+  test('should create an action to change filter', () => {
+    const expectedAction = {
+      type: CHANGE_FILTER,
+      category,
+    };
+    expect(filterBook(category)).toEqual(expectedAction);
   });
 });
