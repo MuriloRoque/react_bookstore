@@ -1,11 +1,11 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import CATEGORIES from '../constants/Categories';
 
 const CategoryFilter = ({ handleFilterChange }) => {
-  const filterChange = useCallback((event) => {
-    handleFilterChange(event.target.value)
-  },[handleFilterChange])
+  const filterChange = useCallback(event => {
+    handleFilterChange(event.target.value);
+  }, [handleFilterChange]);
 
   return (
     <div>
