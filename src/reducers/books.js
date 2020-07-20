@@ -1,21 +1,13 @@
-const initialState = [];
+import { CREATE_BOOK, REMOVE_BOOK } from '../constants/ActionTypes';
+import INITIAL_STATE from '../constants/InitialState';
 
-const books = (state = initialState, action) => {
+const books = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'CREATE_BOOK':
-      return [...state,
-        {
-          id: action.book.id,
-          title: action.book.title,
-          category: action.book.category,
-        },
-      ];
+    case CREATE_BOOK:
+      return [...state, action.book];
 
-    case 'REMOVE_BOOK':
-      return [
-        ...state.slice(0, action.index),
-        ...state.slice(action.index + 1, state.length),
-      ];
+    case REMOVE_BOOK:
+      return state.filter(book => book.id !== action.id);
 
     default:
       return state;

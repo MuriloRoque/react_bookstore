@@ -1,22 +1,23 @@
+import { v1 as uuidv1 } from 'uuid';
 import { createBook, removeBook } from '../../actions/index';
-import ACTIONTYPES from '../../constants/ActionTypes';
+import { CREATE_BOOK, REMOVE_BOOK } from '../../constants/ActionTypes';
 
 describe('actions', () => {
+  const id = uuidv1();
   test('should create an action to create a book', () => {
-    const book = 'Harry Potter';
+    const book = { title: 'Harry Potter', id, category: 'Action' };
     const expectedAction = {
-      type: ACTIONTYPES.CREATE_BOOK,
+      type: CREATE_BOOK,
       book,
     };
     expect(createBook(book)).toEqual(expectedAction);
   });
 
   test('should create an action to remove a book', () => {
-    const book = 'Harry Potter';
     const expectedAction = {
-      type: ACTIONTYPES.REMOVE_BOOK,
-      book,
+      type: REMOVE_BOOK,
+      id,
     };
-    expect(removeBook(book)).toEqual(expectedAction);
+    expect(removeBook(id)).toEqual(expectedAction);
   });
 });
