@@ -12,7 +12,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
       <label htmlFor="category" className="mt-2">
         Books
         <select onChange={filterChange} className="delete-bgcolor ml-4">
-        <option value="Categories" defaultValue>CATEGORIES</option>
+          <option value="Categories" defaultValue>CATEGORIES</option>
           {
            ['All'].concat(CATEGORIES).map(category => (
              <option key={category} value={category}>{ category }</option>
