@@ -1,5 +1,5 @@
 const filteredBooks = (filter, books) => {
-  if (filter !== null && filter !== 'All') {
+  if (filter !== 'All') {
     const filtered = books.filter(book => book.category === filter);
     return filtered;
   }
