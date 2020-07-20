@@ -11,30 +11,23 @@ const BooksList = ({
   books, filter, removeBook, filterBook,
 }) => (
   <div>
-    <CategoryFilter handleFilterChange={filterBook} />
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-            filteredBooks(filter, books).map(book => (
-              <Book
-                key={book.id}
-                title={book.title}
-                category={book.category}
-                id={book.id}
-                removeBook={removeBook}
-              />
-            ))
-          }
-      </tbody>
-    </table>
+    <div className="main-container">
+      <div className="nav-container d-flex">
+        <div className="logo"> Bookstore CMS</div>
+        <CategoryFilter handleFilterChange={filterBook} />
+      </div>
+    </div>
+    {
+      filteredBooks(filter, books).map(book => (
+        <Book
+          key={book.id}
+          title={book.title}
+          category={book.category}
+          id={book.id}
+          removeBook={removeBook}
+        />
+      ))
+    }
   </div>
 );
 
