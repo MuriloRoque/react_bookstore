@@ -1,7 +1,7 @@
 import { v1 as uuidv1 } from 'uuid';
 import books from '../../reducers/books';
 import { CREATE_BOOK, REMOVE_BOOK } from '../../constants/ActionTypes';
-import { INITIAL_STATE } from '../../constants/InitialState';
+import INITIAL_STATE from '../../constants/InitialState';
 
 describe('books reducer', () => {
   const id = uuidv1();

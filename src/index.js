@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
-import { INITIAL_STATE } from './constants/InitialState';
+import INITIAL_STATE from './constants/InitialState';
 
 const STATE = { books: INITIAL_STATE };
 

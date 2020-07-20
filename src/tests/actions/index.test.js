@@ -4,7 +4,7 @@ import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from '../../constants/ActionT
 
 describe('actions', () => {
   const id = uuidv1();
-  const category = 'Action'
+  const category = 'Action';
   test('should create an action to create a book', () => {
     const book = { title: 'Harry Potter', id, category: 'Action' };
     const expectedAction = {

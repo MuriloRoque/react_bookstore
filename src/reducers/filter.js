@@ -1,7 +1,6 @@
 import { CHANGE_FILTER } from '../constants/ActionTypes';
-import { FILTER_STATE } from '../constants/InitialState';
 
-const bookFilter = (state = FILTER_STATE, action) => {
+const bookFilter = (state = null, action) => {
   switch (action.type) {
     case CHANGE_FILTER:
       return action.category;
