@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import CATEGORIES from '../constants/Categories';
+import '../styles/CategoryFilter.scss';
 
 const CategoryFilter = ({ handleFilterChange }) => {
   const filterChange = useCallback(event => {
@@ -8,10 +9,11 @@ const CategoryFilter = ({ handleFilterChange }) => {
   }, [handleFilterChange]);
 
   return (
-    <div>
-      <label htmlFor="category">
-        Filter:
-        <select onChange={filterChange}>
+    <div className="header">
+      <label htmlFor="category" className="mt-2">
+        BOOKS
+        <select onChange={filterChange} className="delete-bgcolor ml-4">
+          <option value="Categories" defaultValue>CATEGORIES</option>
           {
            ['All'].concat(CATEGORIES).map(category => (
              <option key={category} value={category}>{ category }</option>

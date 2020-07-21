@@ -4,6 +4,7 @@ import { v1 as uuidv1 } from 'uuid';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 import CATEGORIES from '../constants/Categories';
+import '../styles/BooksForm.scss';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -42,24 +43,26 @@ class BooksForm extends React.Component {
   render() {
     const { title } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label name="title" htmlFor="title">
-          Please, select the book title:
-          <input type="text" name="title" id="title" value={title} onChange={this.handleChange} />
-        </label>
-        <label name="category" htmlFor="category">
-          Please, select a category:
-          <select id="category" onChange={this.handleChange} name="category">
-            <option value="">Select a category</option>
-            {
-                CATEGORIES.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))
-              }
-          </select>
-        </label>
-        <button value="submit" type="submit">Submit</button>
-      </form>
+      <div className="form-container">
+        <div className="form-title">ADD NEW BOOK</div>
+        <form onSubmit={this.handleSubmit} className="row">
+          <div className="col-md-7 bg-white">
+            <input type="text" placeholder="Book title" name="title" id="title" value={title} onChange={this.handleChange} className="w-100" />
+          </div>
+          <div className="col-md-3">
+            <select id="category" className="w-100 h-full" onChange={this.handleChange} name="category">
+              {
+                  CATEGORIES.map(category => (
+                    <option key={category} value={category}>{ category }</option>
+                  ))
+                }
+            </select>
+          </div>
+          <div className="col-md-2">
+            <button value="submit" className="btn btn-primary full-render" type="submit"> ADD BOOK </button>
+          </div>
+        </form>
+      </div>
     );
   }
 }
