@@ -36,16 +36,16 @@ class BooksForm extends React.Component {
     if (title && category) {
       createBook(book);
       this.setState({ title: '' });
-      this.title.value = '';
     }
   }
 
   render() {
+    const { title } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <label name="title" htmlFor="title">
           Please, select the book title:
-          <input type="text" name="title" id="title" ref={title => { this.title = title; }} onChange={this.handleChange} />
+          <input type="text" name="title" id="title" value={title} onChange={this.handleChange} />
         </label>
         <label name="category" htmlFor="category">
           Please, select a category:
