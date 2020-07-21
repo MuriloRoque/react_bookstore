@@ -1,3 +1,47 @@
-table {
-  margin: 0 auto;
+.main-container {
+  background-color: #fff;
+  margin-bottom: 40px;
+
+  .nav-container {
+    padding: 0 150px;
+    margin: auto;
+    border-bottom: 1px solid #e8e8e8;
+    height: 100px;
+    align-items: center;
+
+    select {
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      letter-spacing: -0.15px;
+      color: #121212;
+    }
+
+    .image-container {
+      margin-left: auto;
+      text-align: center;
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid #e8e8e8;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 28px;
+      }
+    }
+
+    .logo {
+      font-size: 30px;
+      color: #0290ff;
+      font-weight: bolder;
+      margin-right: 40px;
+    }
+  }
 }

@@ -1,0 +1,134 @@
+.book-container {
+  width: 80%;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .color-12121 {
+    opacity: 0.5;
+    color: #121212;
+  }
+
+  .chapter {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .book-category {
+    width: 49px;
+    height: 18px;
+    opacity: 0.5;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+  }
+
+  .book-title {
+    height: 29px;
+    font-family: RobotoSlab, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  .action-container {
+    margin-top: 1.5rem;
+
+    .btnlink {
+      background: none;
+      padding: 0;
+      font-family: RobotoSlab, sans-serif;
+      color: #4386bf;
+      cursor: pointer;
+    }
+
+    .btn-padding-left {
+      padding-left: 1rem;
+    }
+
+    .btn-padding-right {
+      padding-right: 1rem;
+    }
+
+    .disable-btn-border-none {
+      border: none;
+    }
+
+    .disable-btn-border {
+      border: none;
+      border-right: #e8e8e8 solid 2px;
+    }
+  }
+
+  .radialProgressBar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #ddd;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+
+  .radialProgressBar .overlay {
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background: #fff;
+    text-align: center;
+    padding-top: 30%;
+  }
+
+  .progress-10 {
+    background-image: -webkit-linear-gradient(36deg, #ddd 50%, transparent 50%), -webkit-linear-gradient(left, #028cd5 50%, #ddd 50%);
+    background-image: linear-gradient(54deg, #ddd 50%, transparent 50%), linear-gradient(90deg, #028cd5 50%, #ddd 50%);
+  }
+
+  .completed {
+    margin-top: 20px;
+    border-right: #e8e8e8 solid 1px;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.7rem;
+      font-family: Montserrat, sans-serif;
+      color: #121212;
+      line-height: normal;
+      letter-spacing: normal;
+      height: 25px;
+    }
+
+    span {
+      color: #121212;
+      opacity: 0.5;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.8rem;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { v1 as uuidv1 } from 'uuid';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 import CATEGORIES from '../constants/Categories';
+import '../styles/BooksForm.scss';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -58,7 +59,7 @@ class BooksForm extends React.Component {
             </select>
           </div>
           <div className="col-md-2">
-            <button value="submit" className="btn btn-primary full-render" type="submit"> Add Book </button>
+            <button value="submit" className="btn btn-primary full-render" type="submit"> ADD BOOK </button>
           </div>
         </form>
       </div>

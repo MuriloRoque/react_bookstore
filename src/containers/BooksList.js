@@ -6,6 +6,7 @@ import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import { removeBook, filterBook } from '../actions/index';
 import filteredBooks from '../logic/filter';
+import userImage from '../assets/images/user.png';
 
 const BooksList = ({
   books, filter, removeBook, filterBook,
@@ -15,6 +16,9 @@ const BooksList = ({
       <div className="nav-container d-flex">
         <div className="logo"> Bookstore CMS</div>
         <CategoryFilter handleFilterChange={filterBook} />
+        <div className="image-container">
+          <img src={userImage} alt="user" />
+        </div>
       </div>
     </div>
     {
